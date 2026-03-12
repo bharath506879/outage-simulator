@@ -100,7 +100,7 @@ const SystemIntelligence = () => {
                  <Info className="w-5 h-5 text-slate-600" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">Platform Overview & Purpose</span>
+                <span className="block font-bold text-slate-800 text-lg">Platform Overview & Purpose</span>
                 <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Why this simulator exists and its core theme</span>
               </div>
             </div>
@@ -285,8 +285,8 @@ const SystemIntelligence = () => {
                  <Info className="w-5 h-5 text-slate-600" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 text-lg">Platform Overview & Purpose</span>
-                <span className="text-xs text-slate-600 font-medium">Why this simulator exists and its core theme</span>
+                <span className="block font-bold text-slate-800 text-lg">Metric Definations</span>
+                <span className="text-xs text-slate-600 font-medium">How we calculate reliability</span>
               </div>
             </div>
           {openSection === 'metrics' ? 

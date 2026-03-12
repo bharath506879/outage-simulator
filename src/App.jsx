@@ -386,8 +386,7 @@ const SystemIntelligence = () => {
 };
 
 export default function App() {
-  // Theme & Navigation State
-  const [isDarkMode] = useState(false); // Light theme by default
+  // Navigation State
   const [activeTab, setActiveTab] = useState('dashboard');
   const [showWarning, setShowWarning] = useState(true);
 
@@ -564,13 +563,13 @@ export default function App() {
     }
   };
 
-  // The wrapper div applies the `dark` class which triggers Tailwind's dark mode across the children.
+  // The wrapper div no longer applies the dark class - always light theme.
   return (
-    <div className={`${isDarkMode ? 'dark' : ''}`}>
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900/50 pb-6 transition-colors duration-300">
+    <div>
+      <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-indigo-100 pb-6 transition-colors duration-300">
         
         {/* Header */}
-        <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex items-center justify-between sticky top-0 z-20 shadow-sm transition-colors">
+        <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between sticky top-0 z-20 shadow-sm transition-colors">
           <div className="flex items-center gap-3">
             <div className="bg-indigo-600 dark:bg-indigo-500 p-2 rounded-lg">
               <Activity className="text-white w-6 h-6" />

@@ -275,11 +275,11 @@ const SystemIntelligence = () => {
         </div>
 
         {/* 3. Metrics Explained */}
-        <div className="bg-white transition-colors">
-          <button 
-            onClick={() => toggleSection('overview')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
-          >
+<div className="bg-white transition-colors">
+  <button 
+    onClick={() => toggleSection('metrics')}   // ✅ FIXED
+    className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
+  >
             <div className="flex items-center gap-4">
               <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-slate-200 transition-colors">
                  <Info className="w-5 h-5 text-slate-600" />
@@ -289,7 +289,9 @@ const SystemIntelligence = () => {
                 <span className="text-xs text-slate-600 font-medium">Why this simulator exists and its core theme</span>
               </div>
             </div>
-            {openSection === 'metrics' ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
+          {openSection === 'metrics' ? 
+  <ChevronUp className="w-5 h-5 text-slate-400" /> : 
+  <ChevronDown className="w-5 h-5 text-slate-400" />}
           </button>
           
           {openSection === 'metrics' && (

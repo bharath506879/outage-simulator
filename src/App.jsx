@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
 import { 
   Activity, Server, ShieldCheck, Play, Square, Zap, 
-  Info, Brain, GitBranch, Database, Cpu, Network, AlertTriangle, ChevronDown, ChevronUp, LayoutDashboard, Terminal, X
+  Info, Brain, GitBranch, Database, Cpu, Network, AlertTriangle, ChevronDown, ChevronUp, LayoutDashboard, Terminal, X, Moon, Sun
 } from 'lucide-react';
 
 // --- Configuration ---
@@ -73,60 +73,60 @@ const SystemIntelligence = () => {
   };
 
   return (
-    <section className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden animate-in fade-in duration-500 transition-colors">
-      <div className="p-8 border-b border-slate-100 bg-slate-50/50 flex flex-col md:flex-row md:items-center gap-6 transition-colors">
-        <div className="p-4 bg-indigo-100 rounded-2xl w-fit">
-          <Brain className="w-8 h-8 text-indigo-600" />
+    <section className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden animate-in fade-in duration-500 transition-colors">
+      <div className="p-8 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 flex flex-col md:flex-row md:items-center gap-6 transition-colors">
+        <div className="p-4 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl w-fit">
+          <Brain className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">System Intelligence & Simulation Engine</h2>
-          <p className="text-slate-500 max-w-2xl">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">System Intelligence & Simulation Engine</h2>
+          <p className="text-slate-500 dark:text-slate-400 max-w-2xl">
             This platform uses a deterministic chaos engine to simulate infrastructure failure scenarios. 
             Below is a comprehensive breakdown of the architecture, mathematical models, and metric aggregation logic used to train SREs.
           </p>
         </div>
       </div>
 
-      <div className="divide-y divide-slate-100">
+      <div className="divide-y divide-slate-100 dark:divide-slate-800">
 
         {/* 0. Platform Overview & Purpose */}
-        <div className="bg-white transition-colors">
+        <div className="bg-white dark:bg-slate-900 transition-colors">
           <button 
             onClick={() => toggleSection('overview')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
+            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
           >
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-white transition-colors">
-                 <Info className="w-5 h-5 text-slate-500" />
+              <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-700 transition-colors">
+                 <Info className="w-5 h-5 text-slate-500 dark:text-slate-400" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 text-lg">Platform Overview & Purpose</span>
-                <span className="text-xs text-slate-400 font-medium">Why this simulator exists and its core theme</span>
+                <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">Platform Overview & Purpose</span>
+                <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Why this simulator exists and its core theme</span>
               </div>
             </div>
-            {openSection === 'overview' ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
+            {openSection === 'overview' ? <ChevronUp className="w-5 h-5 text-slate-400 dark:text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />}
           </button>
           
           {openSection === 'overview' && (
             <div className="px-8 pb-8 pt-2">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-bold text-slate-800 mb-2">The Theme: Chaos Engineering</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    The central theme of this platform is <strong>Chaos Engineering</strong> and <strong>Resilience Testing</strong>. In modern cloud environments, failures are inevitable. Instead of waiting for a random outage, this platform allows teams to intentionally inject controlled failures to observe system behavior and response strategies.
+                  <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">The Theme: Chaos Engineering</h4>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    The central theme of this platform is <strong className="dark:text-slate-300">Chaos Engineering</strong> and <strong className="dark:text-slate-300">Resilience Testing</strong>. In modern cloud environments, failures are inevitable. Instead of waiting for a random outage, this platform allows teams to intentionally inject controlled failures to observe system behavior and response strategies.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 mb-2">Why It Is Useful</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">Why It Is Useful</h4>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                     It provides a safe, sandboxed environment for DevOps engineers, SREs, and students to build "muscle memory" for incident response. Users can visualize how a single localized issue (like a memory leak) propagates into a critical system-wide outage over time.
                   </p>
                 </div>
-                <div className="md:col-span-2 bg-indigo-50 border border-indigo-100 rounded-lg p-5 mt-2">
-                  <h4 className="font-bold text-indigo-900 mb-2 text-sm flex items-center gap-2">
+                <div className="md:col-span-2 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800/50 rounded-lg p-5 mt-2">
+                  <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mb-2 text-sm flex items-center gap-2">
                     <Zap className="w-4 h-4" /> Value to the User
                   </h4>
-                  <p className="text-sm text-indigo-800 leading-relaxed">
+                  <p className="text-sm text-indigo-800 dark:text-indigo-200/80 leading-relaxed">
                     By actively interacting with the simulator, users learn to correlate raw infrastructure metrics (CPU load, memory growth, latency spikes) with high-level business metrics like MTTR (Mean Time To Recovery) and overall Health Scores. It trains professionals to understand degradation curves, threshold triggers, and stabilization delays without the stress and financial impact of a real 3:00 AM production crash.
                   </p>
                 </div>
@@ -136,21 +136,21 @@ const SystemIntelligence = () => {
         </div>
         
         {/* 1. Architecture & Data Flow */}
-        <div className="bg-white transition-colors">
+        <div className="bg-white dark:bg-slate-900 transition-colors">
           <button 
             onClick={() => toggleSection('architecture')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
+            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
           >
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-white transition-colors">
-                 <GitBranch className="w-5 h-5 text-slate-500" />
+              <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-700 transition-colors">
+                 <GitBranch className="w-5 h-5 text-slate-500 dark:text-slate-400" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 text-lg">Platform Architecture</span>
-                <span className="text-xs text-slate-400 font-medium">Data flow from Python/Mock engine to React UI</span>
+                <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">Platform Architecture</span>
+                <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Data flow from Python/Mock engine to React UI</span>
               </div>
             </div>
-            {openSection === 'architecture' ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
+            {openSection === 'architecture' ? <ChevronUp className="w-5 h-5 text-slate-400 dark:text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />}
           </button>
           
           {openSection === 'architecture' && (
@@ -387,6 +387,7 @@ const SystemIntelligence = () => {
 
 export default function App() {
   // Theme & Navigation State
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
   const [showWarning, setShowWarning] = useState(true);
 
@@ -563,15 +564,15 @@ export default function App() {
     }
   };
 
-  // The wrapper div is now just a light theme wrapper.
+  // The wrapper div applies the `dark` class which triggers Tailwind's dark mode across the children.
   return (
-    <div>
-      <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-indigo-100 pb-6 transition-colors duration-300">
+    <div className={`${isDarkMode ? 'dark' : ''}`}>
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900/50 pb-6 transition-colors duration-300">
         
         {/* Header */}
-        <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between sticky top-0 z-20 shadow-sm transition-colors">
+        <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex items-center justify-between sticky top-0 z-20 shadow-sm transition-colors">
           <div className="flex items-center gap-3">
-            <div className="bg-indigo-600 p-2 rounded-lg">
+            <div className="bg-indigo-600 dark:bg-indigo-500 p-2 rounded-lg">
               <Activity className="text-white w-6 h-6" />
             </div>
             <div>
@@ -598,7 +599,16 @@ export default function App() {
               </button>
             </div>
 
-            <div className="flex flex-col items-end border-l border-slate-200 pl-4">
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className="p-2 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors mr-2"
+              title="Toggle Theme"
+            >
+              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+
+            <div className="flex flex-col items-end border-l border-slate-200 dark:border-slate-800 pl-4">
               <span className="text-[10px] uppercase tracking-wider text-slate-400 dark:text-slate-500 font-bold">System Health</span>
               <div className="flex items-center gap-2">
                 <span className={`w-3 h-3 rounded-full animate-pulse ${getStatusColor(sysState.service_status)}`}></span>
@@ -773,15 +783,15 @@ export default function App() {
                   <div className="flex-1 w-full mt-4">
                     <ResponsiveContainer width="100%" height={350}>
                       <LineChart data={history}>
-                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={isDarkMode ? '#334155' : '#f1f5f9'} />
                         <XAxis dataKey="time" hide={true} />
-                        <YAxis domain={[0, 100]} hide={false} tick={{fontSize: 12, fill: '#94a3b8'}} tickLine={false} axisLine={false} />
+                        <YAxis domain={[0, 100]} hide={false} tick={{fontSize: 12, fill: isDarkMode ? '#64748b' : '#94a3b8'}} tickLine={false} axisLine={false} />
                         <Tooltip 
                           contentStyle={{ 
                             borderRadius: '8px', 
                             border: 'none', 
-                            backgroundColor: '#ffffff',
-                            color: '#0f172a',
+                            backgroundColor: isDarkMode ? '#1e293b' : '#ffffff',
+                            color: isDarkMode ? '#f8fafc' : '#0f172a',
                             boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' 
                           }}
                           itemStyle={{ fontSize: '12px', fontWeight: 'bold' }}

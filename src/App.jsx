@@ -73,31 +73,31 @@ const SystemIntelligence = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden animate-in fade-in duration-500 transition-colors">
-      <div className="p-8 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 flex flex-col md:flex-row md:items-center gap-6 transition-colors">
-        <div className="p-4 bg-indigo-100 dark:bg-indigo-900/40 rounded-2xl w-fit">
-          <Brain className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+    <section className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden animate-in fade-in duration-500 transition-colors">
+      <div className="p-8 border-b border-slate-100 bg-slate-50 flex flex-col md:flex-row md:items-center gap-6 transition-colors">
+        <div className="p-4 bg-indigo-100 rounded-2xl w-fit">
+          <Brain className="w-8 h-8 text-indigo-600" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">System Intelligence & Simulation Engine</h2>
-          <p className="text-slate-500 dark:text-slate-400 max-w-2xl">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">System Intelligence & Simulation Engine</h2>
+          <p className="text-slate-600 max-w-2xl">
             This platform uses a deterministic chaos engine to simulate infrastructure failure scenarios. 
             Below is a comprehensive breakdown of the architecture, mathematical models, and metric aggregation logic used to train SREs.
           </p>
         </div>
       </div>
 
-      <div className="divide-y divide-slate-100 dark:divide-slate-800">
+      <div className="divide-y divide-slate-100">
 
         {/* 0. Platform Overview & Purpose */}
-        <div className="bg-white dark:bg-slate-900 transition-colors">
+        <div className="bg-white transition-colors">
           <button 
             onClick={() => toggleSection('overview')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
           >
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-700 transition-colors">
-                 <Info className="w-5 h-5 text-slate-500 dark:text-slate-400" />
+              <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-slate-200 transition-colors">
+                 <Info className="w-5 h-5 text-slate-600" />
               </div>
               <div className="text-left">
                 <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">Platform Overview & Purpose</span>
@@ -557,10 +557,10 @@ export default function App() {
 
   const getLogStyle = (type) => {
     switch(type) {
-        case 'error': return 'text-rose-600 dark:text-rose-400 font-bold';
-        case 'warning': return 'text-amber-600 dark:text-amber-400 font-semibold';
-        case 'success': return 'text-emerald-600 dark:text-emerald-400 font-bold';
-        default: return 'text-slate-600 dark:text-slate-400';
+        case 'error': return 'text-rose-600 font-bold';
+        case 'warning': return 'text-amber-600 font-semibold';
+        case 'success': return 'text-emerald-600 font-bold';
+        default: return 'text-slate-600';
     }
   };
 
@@ -572,12 +572,12 @@ export default function App() {
         {/* Header */}
         <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between sticky top-0 z-20 shadow-sm transition-colors">
           <div className="flex items-center gap-3">
-            <div className="bg-indigo-600 dark:bg-indigo-500 p-2 rounded-lg">
+            <div className="bg-indigo-600 p-2 rounded-lg">
               <Activity className="text-white w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">System Outage <span className="text-indigo-600 dark:text-indigo-400">Simulator</span></h1>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Infrastructure Resilience Platform</p>
+              <h1 className="text-xl font-bold text-slate-900 tracking-tight">System Outage <span className="text-indigo-600">Simulator</span></h1>
+              <p className="text-xs text-slate-600 font-medium">Infrastructure Resilience Platform</p>
             </div>
           </div>
           
@@ -613,14 +613,14 @@ export default function App() {
           
           {/* Warning Banner */}
           {showWarning && (
-            <div className="mb-6 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-lg p-4 flex items-start justify-between shadow-sm animate-in fade-in slide-in-from-top-2">
+            <div className="mb-6 bg-amber-50 border border-amber-200 rounded-lg p-4 flex items-start justify-between shadow-sm animate-in fade-in slide-in-from-top-2">
               <div className="flex gap-3">
-                <div className="p-2 bg-amber-100 dark:bg-amber-900/50 rounded-lg shrink-0">
-                  <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-500" />
+                <div className="p-2 bg-amber-100 rounded-lg shrink-0">
+                  <AlertTriangle className="w-5 h-5 text-amber-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-amber-900 dark:text-amber-300 text-sm">Safety Warning: Simulation Only</h3>
-                  <p className="text-amber-700 dark:text-amber-200/80 text-xs mt-1 leading-relaxed max-w-2xl">
+                  <h3 className="font-bold text-amber-900 text-sm">Safety Warning: Simulation Only</h3>
+                  <p className="text-amber-700 text-xs mt-1 leading-relaxed max-w-2xl">
                     This tool is intended solely for simulation and educational purposes. 
                     <span className="font-bold"> If connected to real systems, the chaos injection logic will cause actual crashes and service outages. </span> 
                     Do not use in production environments.
@@ -629,7 +629,7 @@ export default function App() {
               </div>
               <button 
                 onClick={() => setShowWarning(false)}
-                className="text-amber-400 dark:text-amber-600 hover:text-amber-600 dark:hover:text-amber-400 p-1 hover:bg-amber-100 dark:hover:bg-amber-900/50 rounded transition-colors"
+                className="text-amber-600 hover:text-amber-700 p-1 hover:bg-amber-100 rounded transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -644,16 +644,16 @@ export default function App() {
               <div className="lg:col-span-4 space-y-6">
                 
                 {/* Controls */}
-                <section className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-5 transition-colors">
-                  <h2 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 transition-colors">
+                  <h2 className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <Zap className="w-4 h-4" /> Chaos Injection
                   </h2>
                   
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Failure Type</label>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Failure Type</label>
                       <select 
-                        className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                        className="w-full p-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                         value={config.type}
                         onChange={(e) => setConfig({...config, type: e.target.value})}
                         disabled={isRunning}
@@ -666,7 +666,7 @@ export default function App() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Intensity</label>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Intensity</label>
                       <div className="grid grid-cols-3 gap-2">
                         {['low', 'medium', 'high'].map((level) => (
                           <button
@@ -675,8 +675,8 @@ export default function App() {
                             disabled={isRunning}
                             className={`py-2 text-xs font-bold uppercase rounded-lg border transition-all ${
                               config.intensity === level 
-                                ? 'bg-indigo-600 text-white border-indigo-600 dark:bg-indigo-500 dark:border-indigo-500 shadow-md transform scale-105' 
-                                : 'bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'
+                                ? 'bg-indigo-600 text-white border-indigo-600 shadow-md transform scale-105' 
+                                : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
                             }`}
                           >
                             {level}
@@ -689,14 +689,14 @@ export default function App() {
                       {!isRunning ? (
                         <button 
                           onClick={handleStart}
-                          className="flex-1 bg-rose-600 hover:bg-rose-700 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-rose-200 dark:shadow-rose-900/20"
+                          className="flex-1 bg-rose-600 hover:bg-rose-700 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-rose-200"
                         >
                           <Play className="w-4 h-4 fill-current" /> Inject Failure
                         </button>
                       ) : (
                         <button 
                           onClick={handleStop}
-                          className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-emerald-200 dark:shadow-emerald-900/20"
+                          className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-emerald-200"
                         >
                           <Square className="w-4 h-4 fill-current" /> Stabilize System
                         </button>
@@ -707,21 +707,21 @@ export default function App() {
 
                 {/* Key Metrics */}
                 <section className="grid grid-cols-2 gap-4">
-                  <div className="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
-                    <div className="text-slate-400 dark:text-slate-500 mb-1 text-xs font-bold uppercase">MTTR (Avg)</div>
-                    <div className="text-2xl font-bold text-slate-800 dark:text-slate-100">
-                      {typeof metrics.mttr_seconds === 'number' ? metrics.mttr_seconds.toFixed(1) : '0.0'}<span className="text-sm text-slate-400 dark:text-slate-500 font-normal ml-1">s</span>
+                  <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 transition-colors">
+                    <div className="text-slate-600 mb-1 text-xs font-bold uppercase">MTTR (Avg)</div>
+                    <div className="text-2xl font-bold text-slate-900">
+                      {typeof metrics.mttr_seconds === 'number' ? metrics.mttr_seconds.toFixed(1) : '0.0'}<span className="text-sm text-slate-600 font-normal ml-1">s</span>
                     </div>
                   </div>
-                  <div className="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
-                    <div className="text-slate-400 dark:text-slate-500 mb-1 text-xs font-bold uppercase">Incidents</div>
-                    <div className="text-2xl font-bold text-slate-800 dark:text-slate-100">{metrics.incident_count || 0}</div>
+                  <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 transition-colors">
+                    <div className="text-slate-600 mb-1 text-xs font-bold uppercase">Incidents</div>
+                    <div className="text-2xl font-bold text-slate-900">{metrics.incident_count || 0}</div>
                   </div>
                 </section>
 
                 {/* Component Status Grid */}
-                <section className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-5 transition-colors">
-                  <h2 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 transition-colors">
+                  <h2 className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <Server className="w-4 h-4" /> Component Health
                   </h2>
                   <div className="space-y-4">
@@ -732,21 +732,21 @@ export default function App() {
                     {/* Service Status Row */}
                     <div>
                       <div className="flex justify-between text-xs mb-1">
-                        <span className="font-medium text-slate-600 dark:text-slate-400">Service Status</span>
+                        <span className="font-medium text-slate-600">Service Status</span>
                         <span className={`font-bold uppercase ${
-                          sysState.service_status === 'down' ? 'text-rose-600 dark:text-rose-500 animate-pulse' : 
-                          sysState.service_status === 'critical' ? 'text-rose-500 dark:text-rose-400' : 
-                          sysState.service_status === 'degraded' ? 'text-amber-500 dark:text-amber-400' : 'text-emerald-500 dark:text-emerald-400'
+                          sysState.service_status === 'down' ? 'text-rose-600 animate-pulse' : 
+                          sysState.service_status === 'critical' ? 'text-rose-500' : 
+                          sysState.service_status === 'degraded' ? 'text-amber-500' : 'text-emerald-500'
                         }`}>
                           {sysState.service_status === 'down' ? 'CRASHING' : 'OPERATIONAL'}
                         </span>
                       </div>
-                      <div className="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                      <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                         <div 
                           className={`h-full transition-all duration-300 ${
-                            sysState.service_status === 'down' ? 'bg-rose-600 dark:bg-rose-500 w-full' : 
-                            sysState.service_status === 'critical' ? 'bg-rose-500 dark:bg-rose-400 w-full' : 
-                            sysState.service_status === 'degraded' ? 'bg-amber-500 dark:bg-amber-400 w-full' : 'bg-emerald-500 dark:bg-emerald-400 w-full'
+                            sysState.service_status === 'down' ? 'bg-rose-600 w-full' : 
+                            sysState.service_status === 'critical' ? 'bg-rose-500 w-full' : 
+                            sysState.service_status === 'degraded' ? 'bg-amber-500 w-full' : 'bg-emerald-500 w-full'
                           }`} 
                         ></div>
                       </div>
@@ -760,12 +760,12 @@ export default function App() {
               <div className="lg:col-span-8 flex flex-col gap-6">
                 
                 {/* Main Chart */}
-                <section className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-1 flex-1 min-h-[400px] flex flex-col transition-colors">
-                  <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
-                    <h2 className="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
-                      <Activity className="w-4 h-4 text-indigo-500 dark:text-indigo-400" /> Real-time System Health
+                <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-1 flex-1 min-h-[400px] flex flex-col transition-colors">
+                  <div className="px-5 py-4 border-b border-slate-100 flex justify-between items-center">
+                    <h2 className="text-sm font-bold text-slate-700 flex items-center gap-2">
+                      <Activity className="w-4 h-4 text-indigo-500" /> Real-time System Health
                     </h2>
-                    <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+                    <div className="flex items-center gap-2 text-xs text-slate-600">
                       <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> Healthy</span>
                       <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-rose-500"></span> Critical</span>
                     </div>
@@ -812,15 +812,15 @@ export default function App() {
                 </section>
 
                 {/* Event Log (Updated to List View) */}
-                <section className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-5 flex flex-col h-[250px] transition-colors">
-                  <h2 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 flex flex-col h-[250px] transition-colors">
+                  <h2 className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <Terminal className="w-4 h-4" /> Live Incident Stream
                   </h2>
-                  <div className="bg-slate-900 dark:bg-slate-950 rounded-lg border border-slate-800 dark:border-black p-4 flex-1 overflow-y-auto font-mono text-xs shadow-inner">
+                  <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 flex-1 overflow-y-auto font-mono text-xs shadow-inner">
                     <div className="space-y-2">
                       {eventLog.map((log) => (
                         <div key={log.id} className="flex gap-3 animate-in fade-in slide-in-from-top-1 duration-300">
-                          <span className="text-slate-500 shrink-0">[{log.time}]</span>
+                          <span className="text-slate-400 shrink-0">[{log.time}]</span>
                           <span className={`${getLogStyle(log.type)}`}>
                               {log.type === 'info' && <span className="text-blue-500 mr-2">ℹ</span>}
                               {log.type === 'success' && <span className="text-emerald-500 mr-2">✔</span>}
@@ -830,7 +830,7 @@ export default function App() {
                           </span>
                         </div>
                       ))}
-                      <div className="text-slate-700 dark:text-slate-800 pt-2 border-t border-slate-800 dark:border-slate-900 mt-4 text-[10px] uppercase tracking-widest text-center">
+                      <div className="text-slate-400 pt-2 border-t border-slate-200 mt-4 text-[10px] uppercase tracking-widest text-center">
                           End of Stream
                       </div>
                     </div>
@@ -857,14 +857,14 @@ const MetricRow = ({ label, value, unit, threshold }) => {
   return (
     <div>
       <div className="flex justify-between text-xs mb-1">
-        <span className="font-medium text-slate-600 dark:text-slate-400">{label}</span>
-        <span className={`font-bold ${isHigh ? 'text-rose-600 dark:text-rose-500' : 'text-slate-500 dark:text-slate-300'}`}>
+        <span className="font-medium text-slate-600">{label}</span>
+        <span className={`font-bold ${isHigh ? 'text-rose-600' : 'text-slate-600'}`}>
           {value.toFixed(1)}{unit}
         </span>
       </div>
-      <div className="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+      <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
         <div 
-          className={`h-full transition-all duration-500 ease-out ${isHigh ? 'bg-rose-500' : 'bg-indigo-500 dark:bg-indigo-400'}`} 
+          className={`h-full transition-all duration-500 ease-out ${isHigh ? 'bg-rose-500' : 'bg-indigo-500'}`} 
           style={{ width: `${Math.min(100, (value / (unit === 'ms' ? 200 : 100)) * 100)}%` }}
         ></div>
       </div>

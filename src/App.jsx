@@ -104,29 +104,29 @@ const SystemIntelligence = () => {
                 <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Why this simulator exists and its core theme</span>
               </div>
             </div>
-            {openSection === 'overview' ? <ChevronUp className="w-5 h-5 text-slate-400 dark:text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />}
+            {openSection === 'overview' ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
           </button>
           
           {openSection === 'overview' && (
             <div className="px-8 pb-8 pt-2">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">The Theme: Chaos Engineering</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                    The central theme of this platform is <strong className="dark:text-slate-300">Chaos Engineering</strong> and <strong className="dark:text-slate-300">Resilience Testing</strong>. In modern cloud environments, failures are inevitable. Instead of waiting for a random outage, this platform allows teams to intentionally inject controlled failures to observe system behavior and response strategies.
+                  <h4 className="font-bold text-slate-800 mb-2">The Theme: Chaos Engineering</h4>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    The central theme of this platform is <strong>Chaos Engineering</strong> and <strong>Resilience Testing</strong>. In modern cloud environments, failures are inevitable. Instead of waiting for a random outage, this platform allows teams to intentionally inject controlled failures to observe system behavior and response strategies.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">Why It Is Useful</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <h4 className="font-bold text-slate-800 mb-2">Why It Is Useful</h4>
+                  <p className="text-sm text-slate-600 leading-relaxed">
                     It provides a safe, sandboxed environment for DevOps engineers, SREs, and students to build "muscle memory" for incident response. Users can visualize how a single localized issue (like a memory leak) propagates into a critical system-wide outage over time.
                   </p>
                 </div>
-                <div className="md:col-span-2 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800/50 rounded-lg p-5 mt-2">
-                  <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mb-2 text-sm flex items-center gap-2">
+                <div className="md:col-span-2 bg-indigo-50 border border-indigo-100 rounded-lg p-5 mt-2">
+                  <h4 className="font-bold text-indigo-900 mb-2 text-sm flex items-center gap-2">
                     <Zap className="w-4 h-4" /> Value to the User
                   </h4>
-                  <p className="text-sm text-indigo-800 dark:text-indigo-200/80 leading-relaxed">
+                  <p className="text-sm text-indigo-800 leading-relaxed">
                     By actively interacting with the simulator, users learn to correlate raw infrastructure metrics (CPU load, memory growth, latency spikes) with high-level business metrics like MTTR (Mean Time To Recovery) and overall Health Scores. It trains professionals to understand degradation curves, threshold triggers, and stabilization delays without the stress and financial impact of a real 3:00 AM production crash.
                   </p>
                 </div>
@@ -136,18 +136,18 @@ const SystemIntelligence = () => {
         </div>
         
         {/* 1. Architecture & Data Flow */}
-        <div className="bg-white dark:bg-slate-900 transition-colors">
+        <div className="bg-white transition-colors">
           <button 
             onClick={() => toggleSection('architecture')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
           >
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-700 transition-colors">
-                 <GitBranch className="w-5 h-5 text-slate-500 dark:text-slate-400" />
+              <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-slate-200 transition-colors">
+                 <GitBranch className="w-5 h-5 text-slate-600" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">Platform Architecture</span>
-                <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Data flow from Python/Mock engine to React UI</span>
+                <span className="block font-bold text-slate-800 text-lg">Platform Architecture</span>
+                <span className="text-xs text-slate-600 font-medium">Data flow from Python/Mock engine to React UI</span>
               </div>
             </div>
             {openSection === 'architecture' ? <ChevronUp className="w-5 h-5 text-slate-400 dark:text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />}
@@ -155,44 +155,44 @@ const SystemIntelligence = () => {
           
           {openSection === 'architecture' && (
             <div className="px-8 pb-8 pt-2">
-              <div className="p-6 bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-slate-200 dark:border-slate-800 mb-6">
+              <div className="p-6 bg-slate-50 rounded-xl border border-slate-200 mb-6">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm font-mono">
-                  <div className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 text-center w-full md:w-48">
-                    <div className="font-bold text-indigo-600 dark:text-indigo-400 mb-1">React Frontend</div>
-                    <div className="text-slate-400 dark:text-slate-500 text-xs">Visualization Layer</div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-center w-full md:w-48">
+                    <div className="font-bold text-indigo-600 mb-1">React Frontend</div>
+                    <div className="text-slate-400 text-xs">Visualization Layer</div>
                   </div>
-                  <div className="hidden md:flex flex-col items-center text-slate-400 dark:text-slate-500 flex-1">
+                  <div className="hidden md:flex flex-col items-center text-slate-400 flex-1">
                     <span className="text-xs mb-1">REST / Polling (500ms)</span>
-                    <div className="h-px w-full bg-slate-300 dark:bg-slate-700 relative">
-                        <div className="absolute inset-0 bg-slate-300 dark:bg-slate-600 animate-pulse"></div>
+                    <div className="h-px w-full bg-slate-300 relative">
+                        <div className="absolute inset-0 bg-slate-300 animate-pulse"></div>
                     </div>
                     <span className="text-xs mt-1">JSON State</span>
                   </div>
-                  <div className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 text-center w-full md:w-48">
-                    <div className="font-bold text-emerald-600 dark:text-emerald-400 mb-1">Simulation Engine</div>
-                    <div className="text-slate-400 dark:text-slate-500 text-xs">Python / Mock JS</div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-center w-full md:w-48">
+                    <div className="font-bold text-emerald-600 mb-1">Simulation Engine</div>
+                    <div className="text-slate-400 text-xs">Python / Mock JS</div>
                   </div>
-                  <div className="hidden md:flex flex-col items-center text-slate-400 dark:text-slate-500 flex-1">
+                  <div className="hidden md:flex flex-col items-center text-slate-400 flex-1">
                     <span className="text-xs mb-1">Physics Loop</span>
-                    <div className="h-px w-full bg-slate-300 dark:bg-slate-700"></div>
+                    <div className="h-px w-full bg-slate-300"></div>
                     <span className="text-xs mt-1">10Hz Tick</span>
                   </div>
-                  <div className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 text-center w-full md:w-48">
-                    <div className="font-bold text-rose-600 dark:text-rose-400 mb-1">Chaos Injector</div>
-                    <div className="text-slate-400 dark:text-slate-500 text-xs">Failure Models</div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-center w-full md:w-48">
+                    <div className="font-bold text-rose-600 mb-1">Chaos Injector</div>
+                    <div className="text-slate-400 text-xs">Failure Models</div>
                   </div>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">Frontend-Backend Decoupling</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <h4 className="font-bold text-slate-800 mb-2">Frontend-Backend Decoupling</h4>
+                    <p className="text-sm text-slate-600 leading-relaxed">
                         The platform operates on a strictly decoupled architecture. The frontend is a "dumb" visualization layer that polls the engine state every 500ms. This ensures that heavy simulation logic does not block the UI thread.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">State Management</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <h4 className="font-bold text-slate-800 mb-2">State Management</h4>
+                    <p className="text-sm text-slate-600 leading-relaxed">
                         The backend maintains a "World State" object that persists across polls. When a failure is injected, it modifies the parameters of the physics loop, which then degrade the system metrics over time rather than instantly.
                     </p>
                   </div>
@@ -202,72 +202,72 @@ const SystemIntelligence = () => {
         </div>
 
         {/* 2. Simulation Logic & Models */}
-        <div className="bg-white dark:bg-slate-900 transition-colors">
+        <div className="bg-white transition-colors">
           <button 
             onClick={() => toggleSection('models')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
           >
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-700 transition-colors">
-                 <Cpu className="w-5 h-5 text-slate-500 dark:text-slate-400" />
+              <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-slate-200 transition-colors">
+                 <Cpu className="w-5 h-5 text-slate-600" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">Failure Models</span>
-                <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Mathematical functions governing chaos</span>
+                <span className="block font-bold text-slate-800 text-lg">Failure Models</span>
+                <span className="text-xs text-slate-600 font-medium">Mathematical functions governing chaos</span>
               </div>
             </div>
-            {openSection === 'models' ? <ChevronUp className="w-5 h-5 text-slate-400 dark:text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />}
+            {openSection === 'models' ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
           </button>
           
           {openSection === 'models' && (
             <div className="px-8 pb-8 pt-2 grid md:grid-cols-2 gap-6">
-              <div className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 hover:bg-white dark:hover:bg-slate-800 transition-colors hover:shadow-md">
-                <h4 className="text-base font-bold text-slate-800 dark:text-slate-200 mb-3 flex items-center gap-2">
-                  <Activity className="w-4 h-4 text-indigo-500 dark:text-indigo-400" /> CPU Saturation
+              <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white transition-colors hover:shadow-md">
+                <h4 className="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                  <Activity className="w-4 h-4 text-indigo-500" /> CPU Saturation
                 </h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-3">Simulates a runaway thread or process locking resources.</p>
-                <div className="bg-slate-900 dark:bg-black/50 rounded-lg p-3 mb-3 border border-slate-800">
-                    <code className="text-[10px] text-green-400 dark:text-green-500 font-mono">
+                <p className="text-xs text-slate-600 mb-3">Simulates a runaway thread or process locking resources.</p>
+                <div className="bg-slate-900 rounded-lg p-3 mb-3 border border-slate-800">
+                    <code className="text-[10px] text-green-400 font-mono">
                     Stress(t) = Limit / (1 + e^(-k(t - t0)))
                     </code>
                 </div>
-                <div className="text-xs text-slate-600 dark:text-slate-400">
-                    We use a <strong className="dark:text-slate-300">Sigmoid function</strong> to create a realistic "ramp-up" curve. Unlike a boolean switch, real CPU saturation often grows exponentially before hitting a ceiling.
+                <div className="text-xs text-slate-600">
+                    We use a <strong>Sigmoid function</strong> to create a realistic "ramp-up" curve. Unlike a boolean switch, real CPU saturation often grows exponentially before hitting a ceiling.
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 hover:bg-white dark:hover:bg-slate-800 transition-colors hover:shadow-md">
-                <h4 className="text-base font-bold text-slate-800 dark:text-slate-200 mb-3 flex items-center gap-2">
-                  <Database className="w-4 h-4 text-indigo-500 dark:text-indigo-400" /> Memory Leak
+              <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white transition-colors hover:shadow-md">
+                <h4 className="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                  <Database className="w-4 h-4 text-indigo-500" /> Memory Leak
                 </h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-3">Simulates ungarbage-collected objects accumulating over time.</p>
-                <div className="bg-slate-900 dark:bg-black/50 rounded-lg p-3 mb-3 border border-slate-800">
-                    <code className="text-[10px] text-green-400 dark:text-green-500 font-mono">
+                <p className="text-xs text-slate-600 mb-3">Simulates ungarbage-collected objects accumulating over time.</p>
+                <div className="bg-slate-900 rounded-lg p-3 mb-3 border border-slate-800">
+                    <code className="text-[10px] text-green-400 font-mono">
                     Mem(t) = Base_Mem + (Leak_Rate * Δt)
                     </code>
                 </div>
-                <div className="text-xs text-slate-600 dark:text-slate-400">
-                    Modeled as a <strong className="dark:text-slate-300">Linear Accumulation</strong>. The system adds a fixed amount of megabytes per second based on the intensity level, eventually triggering an OOM (Out of Memory) crash if not resolved.
+                <div className="text-xs text-slate-600">
+                    Modeled as a <strong>Linear Accumulation</strong>. The system adds a fixed amount of megabytes per second based on the intensity level, eventually triggering an OOM (Out of Memory) crash if not resolved.
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 hover:bg-white dark:hover:bg-slate-800 transition-colors hover:shadow-md">
-                <h4 className="text-base font-bold text-slate-800 dark:text-slate-200 mb-3 flex items-center gap-2">
-                  <Network className="w-4 h-4 text-indigo-500 dark:text-indigo-400" /> Network Latency
+              <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white transition-colors hover:shadow-md">
+                <h4 className="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                  <Network className="w-4 h-4 text-indigo-500" /> Network Latency
                 </h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-3">Simulates packet loss, jitter, or congested routes.</p>
-                <div className="text-xs text-slate-600 dark:text-slate-400">
-                    Injects <strong className="dark:text-slate-300">Gaussian Noise (Jitter)</strong> on top of a fixed latency penalty. This ensures the latency graph looks "noisy" and realistic, rather than a flat line, mimicking real internet instability.
+                <p className="text-xs text-slate-600 mb-3">Simulates packet loss, jitter, or congested routes.</p>
+                <div className="text-xs text-slate-600">
+                    Injects <strong>Gaussian Noise (Jitter)</strong> on top of a fixed latency penalty. This ensures the latency graph looks "noisy" and realistic, rather than a flat line, mimicking real internet instability.
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 hover:bg-white dark:hover:bg-slate-800 transition-colors hover:shadow-md">
-                <h4 className="text-base font-bold text-slate-800 dark:text-slate-200 mb-3 flex items-center gap-2">
-                  <AlertTriangle className="w-4 h-4 text-indigo-500 dark:text-indigo-400" /> Crash Loop
+              <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white transition-colors hover:shadow-md">
+                <h4 className="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4 text-indigo-500" /> Crash Loop
                 </h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-3">Simulates a pod/service failing health checks and restarting.</p>
-                <div className="text-xs text-slate-600 dark:text-slate-400">
-                    Modeled as a <strong className="dark:text-slate-300">Square Wave</strong> function. The service status toggles between binary states (0/1) based on a modulus time factor, creating a "flapping" state that ruins stability scores.
+                <p className="text-xs text-slate-600 mb-3">Simulates a pod/service failing health checks and restarting.</p>
+                <div className="text-xs text-slate-600">
+                    Modeled as a <strong>Square Wave</strong> function. The service status toggles between binary states (0/1) based on a modulus time factor, creating a "flapping" state that ruins stability scores.
                 </div>
               </div>
             </div>
@@ -275,47 +275,47 @@ const SystemIntelligence = () => {
         </div>
 
         {/* 3. Metrics Explained */}
-        <div className="bg-white dark:bg-slate-900 transition-colors">
+        <div className="bg-white transition-colors">
           <button 
-            onClick={() => toggleSection('metrics')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+            onClick={() => toggleSection('overview')}
+            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
           >
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-700 transition-colors">
-                 <Info className="w-5 h-5 text-slate-500 dark:text-slate-400" />
+              <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-slate-200 transition-colors">
+                 <Info className="w-5 h-5 text-slate-600" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">Metric Definitions</span>
-                <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">How we calculate reliability</span>
+                <span className="block font-bold text-slate-800 text-lg">Platform Overview & Purpose</span>
+                <span className="text-xs text-slate-600 font-medium">Why this simulator exists and its core theme</span>
               </div>
             </div>
-            {openSection === 'metrics' ? <ChevronUp className="w-5 h-5 text-slate-400 dark:text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />}
+            {openSection === 'metrics' ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
           </button>
           
           {openSection === 'metrics' && (
             <div className="px-8 pb-8 pt-2">
                <div className="grid md:grid-cols-3 gap-6">
-                 <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
-                    <div className="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase mb-2 tracking-wider">KPI Metric</div>
-                    <div className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">MTTR</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400 mb-4 font-mono">Mean Time To Recovery</div>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                 <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <div className="text-xs font-bold text-indigo-500 uppercase mb-2 tracking-wider">KPI Metric</div>
+                    <div className="text-lg font-bold text-slate-900 mb-1">MTTR</div>
+                    <div className="text-xs text-slate-600 mb-4 font-mono">Mean Time To Recovery</div>
+                    <p className="text-sm text-slate-600 leading-relaxed">
                       The average time elapsed between the start of an incident (Health &lt; 50) and system stabilization (Health &gt; 90). Lower is better.
                     </p>
                  </div>
-                 <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
-                    <div className="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase mb-2 tracking-wider">Composite Score</div>
-                    <div className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">Health Score</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400 mb-4 font-mono">0 - 100 Index</div>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                      Calculated as <code className="bg-white dark:bg-slate-800 px-1.5 py-0.5 rounded border dark:border-slate-600 text-xs">100 - Σ(Weighted Penalties)</code>. Service Status is weighted heaviest (0.5), followed by Memory (0.3) and CPU (0.2).
+                 <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <div className="text-xs font-bold text-indigo-500 uppercase mb-2 tracking-wider">Composite Score</div>
+                    <div className="text-lg font-bold text-slate-900 mb-1">Health Score</div>
+                    <div className="text-xs text-slate-600 mb-4 font-mono">0 - 100 Index</div>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      Calculated as <code className="bg-white px-1.5 py-0.5 rounded border border-slate-200 text-xs">100 - Σ(Weighted Penalties)</code>. Service Status is weighted heaviest (0.5), followed by Memory (0.3) and CPU (0.2).
                     </p>
                  </div>
-                 <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
-                    <div className="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase mb-2 tracking-wider">Trigger</div>
-                    <div className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">Incident</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400 mb-4 font-mono">Critical Event</div>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                 <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <div className="text-xs font-bold text-indigo-500 uppercase mb-2 tracking-wider">Trigger</div>
+                    <div className="text-lg font-bold text-slate-900 mb-1">Incident</div>
+                    <div className="text-xs text-slate-600 mb-4 font-mono">Critical Event</div>
+                    <p className="text-sm text-slate-600 leading-relaxed">
                       An incident is formally opened when the Health Score drops below the 50% threshold. It is only closed when the score sustains &gt;90% for a cooldown period.
                     </p>
                  </div>
@@ -325,52 +325,52 @@ const SystemIntelligence = () => {
         </div>
 
         {/* 4. Future AI/ML Roadmap */}
-        <div className="bg-white dark:bg-slate-900 transition-colors">
+        <div className="bg-white transition-colors">
           <button 
             onClick={() => toggleSection('ml')}
-            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+            className="w-full px-8 py-6 flex items-center justify-between hover:bg-slate-50 transition-colors group"
           >
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-700 transition-colors">
-                 <Brain className="w-5 h-5 text-slate-500 dark:text-slate-400" />
+              <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-slate-200 transition-colors">
+                 <Brain className="w-5 h-5 text-slate-600" />
               </div>
               <div className="text-left">
-                <span className="block font-bold text-slate-800 dark:text-slate-200 text-lg">AI & Machine Learning Roadmap</span>
-                <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Extending the platform with predictive capabilities</span>
+                <span className="block font-bold text-slate-800 text-lg">AI & Machine Learning Roadmap</span>
+                <span className="text-xs text-slate-600 font-medium">Extending the platform with predictive capabilities</span>
               </div>
             </div>
-            {openSection === 'ml' ? <ChevronUp className="w-5 h-5 text-slate-400 dark:text-slate-500" /> : <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />}
+            {openSection === 'ml' ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
           </button>
           
           {openSection === 'ml' && (
             <div className="px-8 pb-8 pt-2">
-              <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 max-w-3xl">
+              <p className="text-sm text-slate-600 mb-6 max-w-3xl">
                 While the current engine uses deterministic rules for educational clarity, the architecture is designed to support plug-and-play ML models for advanced SRE scenarios:
               </p>
               <div className="space-y-4">
-                <div className="flex gap-4 p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-indigo-100 dark:hover:border-indigo-900/50 hover:bg-indigo-50/30 dark:hover:bg-indigo-900/10 transition-all">
-                  <div className="mt-1 w-2 h-2 bg-indigo-500 dark:bg-indigo-400 rounded-full shrink-0"></div>
+                <div className="flex gap-4 p-4 rounded-xl border border-slate-100 hover:border-indigo-100 hover:bg-indigo-50 transition-all">
+                  <div className="mt-1 w-2 h-2 bg-indigo-500 rounded-full shrink-0"></div>
                   <div>
-                    <h5 className="text-sm font-bold text-slate-800 dark:text-slate-200">Anomaly Detection (Isolation Forests)</h5>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    <h5 className="text-sm font-bold text-slate-800">Anomaly Detection (Isolation Forests)</h5>
+                    <p className="text-xs text-slate-600 mt-1">
                       Could be trained on "Healthy" baseline data to detect subtle deviations in latency or disk I/O that don't trigger hard thresholds but indicate impending failure.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4 p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-purple-100 dark:hover:border-purple-900/50 hover:bg-purple-50/30 dark:hover:bg-purple-900/10 transition-all">
-                  <div className="mt-1 w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full shrink-0"></div>
+                <div className="flex gap-4 p-4 rounded-xl border border-slate-100 hover:border-purple-100 hover:bg-purple-50 transition-all">
+                  <div className="mt-1 w-2 h-2 bg-purple-500 rounded-full shrink-0"></div>
                   <div>
-                    <h5 className="text-sm font-bold text-slate-800 dark:text-slate-200">Predictive Forecasting (LSTM / Prophet)</h5>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    <h5 className="text-sm font-bold text-slate-800">Predictive Forecasting (LSTM / Prophet)</h5>
+                    <p className="text-xs text-slate-600 mt-1">
                       Time-series forecasting to predict <i>exactly when</i> memory will be exhausted based on the current linear leak rate, alerting SREs minutes before the actual crash.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4 p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-emerald-100 dark:hover:border-emerald-900/50 hover:bg-emerald-50/30 dark:hover:bg-emerald-900/10 transition-all">
-                  <div className="mt-1 w-2 h-2 bg-emerald-500 dark:bg-emerald-400 rounded-full shrink-0"></div>
+                <div className="flex gap-4 p-4 rounded-xl border border-slate-100 hover:border-emerald-100 hover:bg-emerald-50 transition-all">
+                  <div className="mt-1 w-2 h-2 bg-emerald-500 rounded-full shrink-0"></div>
                   <div>
-                    <h5 className="text-sm font-bold text-slate-800 dark:text-slate-200">Auto-Remediation (Reinforcement Learning)</h5>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    <h5 className="text-sm font-bold text-slate-800">Auto-Remediation (Reinforcement Learning)</h5>
+                    <p className="text-xs text-slate-600 mt-1">
                       An RL agent could be trained to interact with the "Stop Simulation" API to minimize MTTR, learning the optimal moment to intervene vs. waiting for self-healing.
                     </p>
                   </div>

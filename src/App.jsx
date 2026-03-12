@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
 import { 
   Activity, Server, ShieldCheck, Play, Square, Zap, 
-  Info, Brain, GitBranch, Database, Cpu, Network, AlertTriangle, ChevronDown, ChevronUp, LayoutDashboard, Terminal, X, Moon, Sun
+  Info, Brain, GitBranch, Database, Cpu, Network, AlertTriangle, ChevronDown, ChevronUp, LayoutDashboard, Terminal, X
 } from 'lucide-react';
 
 // --- Configuration ---
@@ -387,7 +387,7 @@ const SystemIntelligence = () => {
 
 export default function App() {
   // Theme & Navigation State
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode] = useState(true); // Keep dark mode enabled by default
   const [activeTab, setActiveTab] = useState('dashboard');
   const [showWarning, setShowWarning] = useState(true);
 
@@ -598,15 +598,6 @@ export default function App() {
                 <Brain className="w-3.5 h-3.5" /> Intelligence
               </button>
             </div>
-
-            {/* Dark Mode Toggle */}
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors mr-2"
-              title="Toggle Theme"
-            >
-              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </button>
 
             <div className="flex flex-col items-end border-l border-slate-200 dark:border-slate-800 pl-4">
               <span className="text-[10px] uppercase tracking-wider text-slate-400 dark:text-slate-500 font-bold">System Health</span>

@@ -387,6 +387,7 @@ const SystemIntelligence = () => {
 
 export default function App() {
   // Navigation State
+  const isDarkMode = false; // Always light theme
   const [activeTab, setActiveTab] = useState('dashboard');
   const [showWarning, setShowWarning] = useState(true);
 
